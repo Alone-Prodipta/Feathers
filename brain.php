@@ -1,12 +1,12 @@
 <?php
 // 1. Connect to XAMPP MySQL
-$conn = new mysqli("localhost", "root", "", "fashion");
+$conn = new mysqli("localhost", "root", "Prodipta_007#", "fasion");
 
 // 2. Look at the URL to see what the user wants (e.g., category.php?type=formal)
 $type = $_GET['type']; 
 
 // 3. The "Filter" - Get ONLY the distinct items for this category
-$result = $conn->query("SELECT * FROM products WHERE category = '$type'");
+$result = $conn->query("SELECT * FROM product WHERE category = '$type'");
 
 echo "<h1>Showing $type Wear</h1>";
 echo "<div style='display: flex; gap: 20px;'>";
@@ -15,7 +15,8 @@ echo "<div style='display: flex; gap: 20px;'>";
 while($row = $result->fetch_assoc()) {
     echo "<div style='border: 1px solid #ccc; padding: 10px;'>";
     // This looks for the image name stored in the DB
-    echo "<img src='images/" . $row['image_name'] . "' width='150'><br>";
+    <img src="images/<?php echo $row['image_name']; ?>">
+<img src="<?php echo $row['image_name']; ?>" style="width:100%; height:250px; object-fit:cover;">
     echo "<b>" . $row['name'] . "</b><br>";
     echo "$" . $row['price'] . "<br>";
     echo "<button>View Details</button>";
