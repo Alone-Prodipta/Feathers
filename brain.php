@@ -1,6 +1,6 @@
 <?php
 // 1. Connect to XAMPP MySQL
-$conn = new mysqli("localhost", "root", "", "fashion_db");
+$conn = new mysqli("localhost", "root", "", "fashion");
 
 // 2. Look at the URL to see what the user wants (e.g., category.php?type=formal)
 $type = $_GET['type']; 
