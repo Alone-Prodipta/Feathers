@@ -20,11 +20,12 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'formal';
 $sql = "SELECT * FROM product WHERE category = '$type'";
 $result = $conn->query($sql);
 
-echo '
-<html>
+echo '<html>
 <head>
-    <title>Showing '.$type.' Wear</title>
+    <title>Showing ' . $type . ' Wear</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Kenia&family=Lemon" rel="stylesheet">
 </head>
 <body style="background-color: bisque;">
 <nav class="navbar navbar-expand-lg fixed-top" style="background-color: bisque;">
@@ -68,20 +69,20 @@ echo '
 
 // 4. THE MAGIC LOOP
 // 4. THE MAGIC LOOP
-echo "<div style='display: flex; flex-wrap: wrap; gap: 20px; margin-top: 80px; margin-left: 10px;'>";
+echo "<div style='display: flex; flex-wrap: wrap; gap: 20px; margin-top: 80px; margin-left: 20px;'>";
 
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
+    while ($row = $result->fetch_assoc()) {
         echo "<div style='border: 2px solid green; padding: 10px; width: 220px; text-align: center; border-radius: 8px;'>";
-        
+
         echo "<img src='" . $row['image_name'] . "' style='width:100%; height:250px; object-fit:cover; border-radius: 5px;'>";
-        
+
         echo "<div style='margin-top: 10px;'>";
         echo "<b>" . $row['name'] . "</b><br>";
         echo "<span style='color: #058f3e; font-weight: bold;'>$" . $row['price'] . "</span><br>";
-        echo "<button style='margin-top: 10px; color: white; cursor: pointer;background-color: green;padding: 10px; border-radius: 10px; border: none;'>View Details</button>";
+        echo "<button id='details' style='margin-top: 10px; font-family: Lemon; color: white; cursor: pointer;background-color: green;padding: 10px; border-radius: 10px; border: none;'>View Details</button>";
         echo "</div>";
-        
+
         echo "</div>";
     }
 } else {
@@ -94,4 +95,3 @@ echo "</div>";
 echo "</body></html>";
 
 $conn->close();
-?>
