@@ -39,10 +39,10 @@ echo '<html>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.html" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="#" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Shop
                     </a>
@@ -53,7 +53,7 @@ echo '<html>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;" href="contact.html">Contact Us</a>
                 </li>
             </ul>
             <form class="d-flex w-50" role="search">
