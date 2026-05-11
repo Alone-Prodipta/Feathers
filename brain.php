@@ -79,7 +79,12 @@ if ($result->num_rows > 0) {
         echo "<div style='margin-top: 10px;'>";
         echo "<b>" . $row['name'] . "</b><br>";
         echo "<span style='color: #058f3e; font-weight: bold;'>$" . $row['price'] . "</span><br>";
-        echo "<button id='details' style='margin-top: 10px; font-family: Lemon; color: white; cursor: pointer;background-color: green;padding: 10px; border-radius: 10px; border: none;'>View Details</button>";
+        // Wrap the button in a link that passes the product ID to details.php
+        echo "<a href='details.php?id=" . $row['id'] . "' style='text-decoration: none;'>";
+        echo "<button id='details' style='margin-top: 10px; font-family: Lemon; color: white; cursor: pointer; background-color: green; padding: 10px; border-radius: 10px; border: none;'>";
+        echo "View Details";
+        echo "</button>";
+        echo "</a>";
         echo "</div>";
 
         echo "</div>";
