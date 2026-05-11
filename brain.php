@@ -92,6 +92,26 @@ if ($result->num_rows > 0) {
 } else {
     echo "<p style='margin-top:80px;'>No products found in this category.</p>";
 }
+// 2. GET THE SEARCH OR CATEGORY FROM URL
+$search = isset($_GET['search']) ? $_GET['search'] : '';
+$type = isset($_GET['type']) ? $_GET['type'] : '';
+
+// 3. DYNAMIC FETCH LOGIC
+if (!empty($search)) {
+    // If there is a search term, prioritize the search results
+    $sql = "SELECT * FROM product WHERE name LIKE '%$search%' OR category LIKE '%$search%'";
+    $title = "Search Results for: " . htmlspecialchars($search);
+} elseif (!empty($type)) {
+    // If a category link was clicked, filter by that category
+    $sql = "SELECT * FROM product WHERE category = '$type'";
+    $title = "Showing " . ucfirst($type) . " Wear";
+} else {
+    // Only show Formal Wear as a last resort if both search and type are empty
+    $sql = "SELECT * FROM product WHERE category = 'formal'";
+    $title = "Showing Formal Wear";
+}
+
+$result = $conn->query($sql);
 
 
 

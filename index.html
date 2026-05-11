@@ -18,7 +18,7 @@
 
         }
 
-       
+
 
         .navbar .nav-link {
             color: rgb(4, 72, 4);
@@ -28,8 +28,7 @@
 
         }
 
-        p
-        {
+        p {
             margin-top: 150px;
             margin-bottom: 0;
             color: bisque;
@@ -38,7 +37,7 @@
             text-decoration: bold;
             font-family: cursive;
         }
-            
+
 
         .navbar .nav-link:hover {
             color: green;
@@ -79,12 +78,12 @@
 
             background-color: bisque;
         }
-        .custom-section
-        {
+
+        .custom-section {
             background-color: rgb(4, 72, 4);
         }
-        text 
-        {
+
+        text {
             font-size: 5rem;
             animation: fadeIn 0.8s ease-in-out forwards;
         }
@@ -94,25 +93,22 @@
             margin-left: 50px;
             margin-right: 50px;
         }
-        .form-control:focus 
-        {
+
+        .form-control:focus {
             border-color: rgb(4, 72, 4);
             box-shadow: 0 0 0 0.2rem rgba(4, 72, 4, 0.25);
             border-width: 2px;
-            
+
         }
 
-        @keyframes fadeIn 
-        {
-            from 
-            {
+        @keyframes fadeIn {
+            from {
                 opacity: 0;
                 transform: translateY(30px);
                 filter: blur(10px);
             }
 
-            to 
-            {
+            to {
                 opacity: 1;
                 transform: translateY(0);
                 filter: blur(0);
@@ -152,9 +148,10 @@
                     </li>
 
                 </ul>
-                <form class="d-flex w-50" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Cart</button>
+                <form class="d-flex w-50" action="brain.php" method="GET" role="search">
+                    <input name="search" class="form-control me-2" type="search" placeholder="Search for products..."
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
         </div>
@@ -164,7 +161,8 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="pic 2.jpg"></div>
             <div class="swiper-slide"><img src="pic 3.jpg"></div>
-            <div class="swiper-slide"><img src="https://images.pexels.com/photos/37070434/pexels-photo-37070434.jpeg"></div>
+            <div class="swiper-slide"><img src="https://images.pexels.com/photos/37070434/pexels-photo-37070434.jpeg">
+            </div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -177,17 +175,17 @@
                     <div class="card-body text-align-center">
                         <h2 style="font-size:50px;color:bisque;text-align:center;">About Us</h2>
                         <p class="card-text">Welcome to my world of men’s fashion, where style meets confidence. <br>
-                        Driven by a passion for timeless design and modern trends, <br>
-                        I curate collections that blend sophistication with everyday wear. <br>
-                        From sharp tailoring to casual essentials, each piece reflects <br>
-                        a commitment to quality, comfort, and individuality. <br>
-                        Fashion is more than clothing—it’s self-expression, <br>
-                        and my goal is to inspire men to embrace their unique identity. <br>
-                        Whether it’s a bold statement or subtle refinement, <br>
-                        I believe every outfit tells a story worth sharing. <br>
-                        Step into this space and discover fashion redefined for today’s man.</p>
+                            Driven by a passion for timeless design and modern trends, <br>
+                            I curate collections that blend sophistication with everyday wear. <br>
+                            From sharp tailoring to casual essentials, each piece reflects <br>
+                            a commitment to quality, comfort, and individuality. <br>
+                            Fashion is more than clothing—it’s self-expression, <br>
+                            and my goal is to inspire men to embrace their unique identity. <br>
+                            Whether it’s a bold statement or subtle refinement, <br>
+                            I believe every outfit tells a story worth sharing. <br>
+                            Step into this space and discover fashion redefined for today’s man.</p>
                         <img src="endline.png" style="width: 100%; height: 300px;">
-                        
+
                     </div>
                 </div>
             </div>
@@ -195,7 +193,7 @@
                 <div class="card" style="background-color: transparent; border:none; margin-top: 6%;">
                     <div class="card-body">
                         <img src="pic 1.webp" class="img-fluid height:100%; width:100%;">
-                        
+
                     </div>
                 </div>
             </div>
@@ -210,7 +208,7 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
-            navigation: 
+            navigation:
             {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
@@ -218,4 +216,5 @@
         });
     </script>
 </body>
+
 </html>
