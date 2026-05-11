@@ -47,9 +47,9 @@ echo '<html>
                         Shop
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Formal wear</a></li>
-                        <li><a class="dropdown-item" href="#">Casual wear</a></li>
-                        <li><a class="dropdown-item" href="#">Traditional wear</a></li>
+                        <li><a class="dropdown-item" href="brain.php?type=formal">Formal wear</a></li>
+                        <li><a class="dropdown-item" href="brain.php?type=casual">Casual wear</a></li>
+                        <li><a class="dropdown-item" href="brain.php?type=traditional">Traditional wear</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -63,12 +63,11 @@ echo '<html>
         </div>
     </div>
 </nav>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>';
 
-
-// 4. THE MAGIC LOOP
-// 4. THE MAGIC LOOP
 echo "<div style='display: flex; flex-wrap: wrap; gap: 20px; margin-top: 80px; margin-left: 20px;'>";
 
 if ($result->num_rows > 0) {
