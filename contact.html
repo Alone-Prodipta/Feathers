@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Kenia" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
     html,
@@ -19,14 +20,15 @@
         background-color: bisque;
 
     }
-     i{
+     .icon {
         font-size: 16px;
         align-items: center;
         border: 2px solid green;
         border-radius: 50%;
         padding: 1%;
+        color: green;
     }
-
+    
     .navbar .nav-link {
         color: rgb(4, 72, 4);
         font-weight: bold;
@@ -115,7 +117,7 @@
                 </ul>
                 <form class="d-flex w-50" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success " type="submit"><i class="bi bi-cart rounded-0 border-0"></i></button>
+                    <button class="btn btn-outline-success " type="submit">Cart</button>
                 </form>
             </div>
         </div>
@@ -143,11 +145,11 @@
             <textarea class="message" style="width:1000px; height:100px; margin-left: 10px; padding-top: 10px" placeholder="Write your opininon">
             </textarea>
             <div class="d-flex flex-wrap gap-3">
-                <i class="bi bi-telephone-fill"></i>
-                <i class="bi bi-envelope-fill"></i>
-                <i class="bi bi-whatsapp"></i>
+                <a class="icon" href="9123360334"><i class="fa fa-instagram-fill"></i></a>
+                <a class="icon" href="nayebprodipta@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+                <a class="icon" href="https://tinyurl.com/Prodipta-chat"><i class="bi bi-whatsapp"></i></a>
             </div>
-            <button class="bg-success text-white py-2 px-4 send">Send</button>
+            <button class="bg-success text-white py-2 px-4 send"><a href="nayebprodipta@gmail.com" style="color: white; text-decoration: none;">Send</a></button>
         </div>
         </form>
 
