@@ -59,7 +59,7 @@ if (!$product) {
 <body>
     <nav class="navbar navbar-expand-lg bg-bisque fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="font-family:lobster;color:rgb(4, 72, 4);"><u>Paris Londoner</u>.</a>
+            <a class="navbar-brand" href="#" style="font-family:lobster;color:rgb(4, 72, 4);"><u>Feathers</u>.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">

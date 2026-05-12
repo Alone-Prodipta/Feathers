@@ -30,7 +30,7 @@ echo '<html>
 <body style="background-color: bisque;">
 <nav class="navbar navbar-expand-lg fixed-top" style="background-color: bisque;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="font-family:lobster;color:rgb(4, 72, 4);"><u>Paris Londoner</u>.</a>
+        <a class="navbar-brand" href="#" style="font-family:lobster;color:rgb(4, 72, 4);"><u>Feathers</u>.</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -92,6 +92,12 @@ if ($result->num_rows > 0) {
 } else {
     echo "<p style='margin-top:80px;'>No products found in this category.</p>";
 }
+echo "<form method='POST' action='cart.php'>";
+echo "<input type='hidden' name='product_id' value='" . $row['id'] . "'>";
+echo "<input type='hidden' name='product_name' value='" . $row['name'] . "'>";
+echo "<input type='hidden' name='product_price' value='" . $row['price'] . "'>";
+echo "<button type='submit' name='add_to_cart' style='background-color: #054805; color: white; border: none; padding: 5px 15px; border-radius: 5px; margin-top: 5px;'>Add to Cart</button>";
+echo "</form>";
 // 2. GET THE SEARCH OR CATEGORY FROM URL
 $search = isset($_GET['search']) ? $_GET['search'] : '';
 $type = isset($_GET['type']) ? $_GET['type'] : '';
