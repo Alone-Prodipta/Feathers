@@ -1,330 +1,343 @@
-body
-{
-    background-color:bisque;
-}
-#switch
-{
-    margin-left:76%;
+body {
+    background-color: bisque;
 }
 
-button
-{
-   position:relative;
-   font-family:Tagesschrift;
-   z-index:100;
-   padding:5px;
-   width:10%;
-   height:40px;
-   background-color:transparent;
-   margin-top:20px;
-   margin-bottom:13px;
-   border-radius:20px;
-   font-size:18px;
-    margin-right:25px;
+#switch {
+    margin-left: 76%;
+}
+
+button {
+    position: relative;
+    font-family: Tagesschrift;
+    z-index: 100;
+    padding: 5px;
+    width: 10%;
+    height: 40px;
+    background-color: transparent;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-right: 25px;
     border: 4px solid rgb(26, 81, 4);
-    color:rgb(26, 81, 4);
+    color: rgb(26, 81, 4);
     transition: 2s;
-    transition-delay:0.1s;
-    font-weight:bold;
+    transition-delay: 0.1s;
+    font-weight: bold;
 }
-button:hover
-{
-    background-color:rgb(24, 79, 3);
-    color:white;
-    transform:scale(1.09);
-    cursor:pointer;
+
+button:hover {
+    background-color: rgb(24, 79, 3);
+    color: white;
+    transform: scale(1.09);
+    cursor: pointer;
 }
-.head-text p
-{
-    font-family:lobster;
-    font-size:100px;
+
+.head-text p {
+    font-family: lobster;
+    font-size: 100px;
 }
-.header
-{    
+
+.header {
     width: 100%;
 }
-.header>img
-{
+
+.header>img {
     width: 100%;
-    border-top-right-radius:20px;
-    border-top-left-radius:20px; 
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
-.head-text
-{
+
+.head-text {
     position: relative;
     z-index: 0;
     margin-top: -535px;
-    color:white;
-    padding-left:50px;
-}
-.head-text p
-{
-    line-height:10px;
-}
-div.ribbon 
-{
-  width:100%;
-  overflow: revert-layer;
-  margin-top:187px;
-  display:flex;
-  border-top:2px dotted green;
-}
-div.ribbon div 
-{
-  width: 28%;
-  margin-top:20px;
-  margin-left:60px;
-  height: 437px;
-  transition: 2s;
-  transition-delay:0.1s;
-}
-div.ribbon div img
-{
-    width:100%;
-    height:100%;
-    border-bottom-right-radius:20px;
-    border-bottom-left-radius:20px;    
+    color: white;
+    padding-left: 50px;
 }
 
-div.ribbon div:hover
-{
-    transform:scale(1.09);  
+.head-text p {
+    line-height: 10px;
 }
-div.ribbon div:hover button
-{
-    opacity:1;
+
+div.ribbon {
+    width: 100%;
+    overflow: revert-layer;
+    margin-top: 187px;
+    display: flex;
+    border-top: 2px dotted green;
 }
-.op
-{
-    width:28%;
-    margin-left:282px;
-    top:94%;
-    opacity:0;
+
+div.ribbon div {
+    width: 28%;
+    margin-top: 20px;
+    margin-left: 60px;
+    height: 437px;
+    transition: 2s;
+    transition-delay: 0.1s;
 }
-li
-{
-    list-style-type:Square;
-    font-family:Tagesschrift;
-    font-size:30px;
-    text-align:center;
+
+div.ribbon div img {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
-div.ribbon div:hover li
-{
-    opacity:0;
+
+div.ribbon div:hover {
+    transform: scale(1.09);
 }
-.description
-{
-  height: 40%;
-  width: 82%;
-  margin-top: 10%;
-  padding-left: 260px;
-  font-family:Londrina Shadow;
-  color:green;
-  border-top:3px dotted green;
-  padding-top:20px;
+
+div.ribbon div:hover button {
+    opacity: 1;
 }
-#info
-{
+
+.op {
+    width: 28%;
+    margin-left: 282px;
+    top: 94%;
+    opacity: 0;
+}
+
+li {
+    list-style-type: Square;
+    font-family: Tagesschrift;
+    font-size: 30px;
+    text-align: center;
+}
+
+div.ribbon div:hover li {
+    opacity: 0;
+}
+
+.description {
+    height: 40%;
+    width: 82%;
+    margin-top: 10%;
+    padding-left: 260px;
+    font-family: Londrina Shadow;
+    color: green;
+    border-top: 3px dotted green;
+    padding-top: 20px;
+}
+
+#info {
     height: 40%;
     width: 30%;
-    padding:20px;
-    border:2px solid rgb(4, 71, 4);
-    padding-bottom:20px;
+    padding: 20px;
+    border: 2px solid rgb(4, 71, 4);
+    padding-bottom: 20px;
 }
-.description div
-{
-    float:left;
-    margin-right:185px;
+
+.description div {
+    float: left;
+    margin-right: 185px;
 }
-#info>button
-{
-    border-radius:0;
-    border-color:rgb(26, 81, 4);
-    border-width:2px;
-    color:rgb(26, 81, 4);
-    transition:none;
-    width:40%;
-    background-color:transparent;
+
+#info>button {
+    border-radius: 0;
+    border-color: rgb(26, 81, 4);
+    border-width: 2px;
+    color: rgb(26, 81, 4);
+    transition: none;
+    width: 40%;
+    background-color: transparent;
 }
-#info>button:hover
-{
-    translate:scale(0);
-    background-color:rgb(26, 81, 4);
-    color:bisque;
+
+#info>button:hover {
+    translate: scale(0);
+    background-color: rgb(26, 81, 4);
+    color: bisque;
 }
-@media screen and (max-width:1357px)
-{
-    .description div
-    {
-        float:left;
-        margin-right:79px;
-         margin-left:-4%; 
+
+@media screen and (max-width:1357px) {
+    .description div {
+        float: left;
+        margin-right: 79px;
+        margin-left: -4%;
     }
-    .header>button
-    {
-        margin-left:-2%;
-        
+
+    .header>button {
+        margin-left: -2%;
+
     }
-    #switch
-    {
-        margin-left:67%;
+
+    #switch {
+        margin-left: 67%;
     }
-    #info
-    {
-        width:30%;
-        height:600px;
-        margin-left:-9%;
+
+    #info {
+        width: 30%;
+        height: 600px;
+        margin-left: -9%;
     }
-    #info button
-    {
-        width:64%;
-        margin-left:20%;
-        margin-top:5px;
-    }   
-    .ribbon div> button
-    {
-        width:64%;
-        margin-left:20%;
+
+    #info button {
+        width: 64%;
+        margin-left: 20%;
+        margin-top: 5px;
     }
-    .description
-    {
-        margin-top:30%;
+
+    .ribbon div>button {
+        width: 64%;
+        margin-left: 20%;
     }
-    .head-text p
-    {
-        line-height:0;
-        margin-top:18%;
-        font-size:80px;
+
+    .description {
+        margin-top: 30%;
     }
-    .head-text button
-    {
-        width:20%;
-        margin-top:-21px;
+
+    .head-text p {
+        line-height: 0;
+        margin-top: 18%;
+        font-size: 80px;
+    }
+
+    .head-text button {
+        width: 20%;
+        margin-top: -21px;
     }
 }
-@media screen and(max-height:1800px)
-{
-    .description div
-    {
-        float:left;
-        margin-right:79px;
-        margin-left:-4%; 
+
+@media screen and(max-height:1800px) {
+    .description div {
+        float: left;
+        margin-right: 79px;
+        margin-left: -4%;
     }
-    
+
 }
-input[type=text], input[type=password], input[type=email] 
-{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid rgb(24, 79, 3);
-  box-sizing: border-box;
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(24, 79, 3);
+    box-sizing: border-box;
 }
+
 /* Set a style for login buttons */
-#login 
-{
-  background-color: #04AA6D;
-  color: white;
-  padding: 10px ;
-  margin-left: 150px;
-  border: none;
-  cursor: pointer;
-  width: 30%;
+#login {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px;
+    margin-left: 150px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
 }
-#login,.cancelbtn:hover 
-{
-  transform: none;
-  transition: none;
+
+#login,
+.cancelbtn:hover {
+    transform: none;
+    transition: none;
 }
-.cancelbtn:hover 
-{
-  background-color:rgb(244, 67, 54);
+
+.cancelbtn:hover {
+    background-color: rgb(244, 67, 54);
 }
 
 
 /* Extra styles for the cancel button */
-.cancelbtn 
-{
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-  color: white;
-  border: none;
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    color: white;
+    border: none;
 }
 
 /* Center the image and position the close button */
-.imgcontainer 
-{
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-.container 
-{
-  padding: 16px;
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
 }
 
-span.psw 
-{
-  float: right;
-  padding-top: 16px;
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
 }
 
 /* The Modal (background) */
-.modal 
-{
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  padding-top: 60px;
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    padding-top: 60px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* dim background */
+    display: none;
+    /* hidden by default */
+    z-index: 999;
+    /* sits below modal */
 }
 
 /* Modal Content/Box */
-.modal-content 
-{
-  background-color: #fefefe;
-  margin: 5% auto 15% 20%; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 50%; /* Could be more or less, depending on screen size */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% 20%;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%;
+    /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
-.close 
-{
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 .close:hover,
-.close:focus 
-{
-  color: red;
-  cursor: pointer;
+.close:focus {
+    color: red;
+    cursor: pointer;
 }
+
 /* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) 
-{
-  span.psw 
-  {
-    display: block;
-    float: none;
-  }
-  .cancelbtn 
-  { 
-    width: 100%;
-  }
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
 }
-.remember, input[type=checkbox]
-{
-    margin-top:20px;
+
+.remember,
+input[type=checkbox] {
+    margin-top: 20px;
 }

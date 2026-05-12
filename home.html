@@ -25,11 +25,12 @@ family=Roboto+Slab&family=Tagesschrift&display=swap" rel="stylesheet">
         <h1 style="margin-bottom:-58px;font-family:lobster;color:#054805">Paris <u>Londoner</u>.</h1>
         <button id="switch" onclick="document.getElementById('id02').style.display='block'">Sign in</button>
         <button onclick="document.getElementById('id01').style.display='block'">Log in</button>
+        <div id="overlay"></div>
         <div id="id01" class="modal">
             <form class="modal-content animate" action="/action_page.php" method="post">
                 <div class="imgcontainer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                        title="Close Modal">&times;</span>
+                    <span class="close" title="Close Modal">&times;</span>
+
                 </div>
 
                 <div class="container">
@@ -96,7 +97,7 @@ family=Roboto+Slab&family=Tagesschrift&display=swap" rel="stylesheet">
                 Here</button><img src="ph2.webp">
             <li>Casual Wear</li>
         </div>
-        <div><button class="op"
+        <div><button class="op" 
                 style="border-radius:0;border-color:white;border-width:2px;color:white;background-color:transparent">Click
                 Here</button><img src="ph4.jpg">
             <li>Traditional Wear</li>
