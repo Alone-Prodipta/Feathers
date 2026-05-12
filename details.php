@@ -68,7 +68,7 @@ if (!$product) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;">Home</a>
+                        <a class="nav-link active" aria-current="page" href="home.html" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;">Home</a>
                     </li>
 
                     <li class="nav-item dropdown">
