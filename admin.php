@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action'])) {
 
         if ($result->num_rows > 0) {
             $_SESSION['user'] = $u;
-            echo "<script>alert('Welcome $u!'); window.location.href='index.html';</script>";
+             echo "<script>alert('Welcome $u!'); window.location.href='home.html';</script>";
         } else {
             echo "<script>alert('Invalid Username or Password');</script>";
         }
