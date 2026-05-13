@@ -151,8 +151,10 @@
                 <form class="d-flex w-50" action="brain.php" method="GET" role="search">
                     <input name="search" class="form-control me-2" type="search" placeholder="Search for products..."
                         aria-label="Search">
-                    <!--button class="btn btn-outline-success" type="submit">Cart</button-->
-                    <a href="cart.php" class="btn btn-outline-success">Cart (<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>)</a>
+                    <button class="btn btn-outline-success" type="button" onclick="location.href='cart.php';">
+                        Cart
+                        <?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>
+                    </button>
                 </form>
             </div>
         </div>
