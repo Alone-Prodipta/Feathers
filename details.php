@@ -1,13 +1,12 @@
 <?php
+session_start();
 // 1. DATABASE CONNECTION
-$servername = getenv('DB_HOST');
-$username   = getenv('DB_USER');
-$password   = getenv('DB_PASS');
-$dbname     = getenv('DB_NAME');
-$port       = 18078; // Add this specific port from your Aiven screen
+$servername = "localhost";
+$username = "root";
+$password = "Prodipta_007#"; // Default XAMPP password is empty
+$dbname = "fasion";
 
-// Update this line to include $port at the end
-$conn = new mysqli($servername, $username, $password, $dbname, $port);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -52,6 +51,7 @@ if (!$product) {
             color: green;
             font-weight: bold;
         }
+
         .navbar {
             background-color: bisque;
         }
@@ -109,8 +109,20 @@ if (!$product) {
                 <p>This is a premium quality garment designed for comfort and style. Perfect for your <?php echo $product['category']; ?> collection.</p>
 
                 <div class="mt-4">
-                    <button class="btn btn-success btn-lg">Add to Cart</button>
-                    <a href="brain.php?type=<?php echo $product['category']; ?>" class="btn btn-outline-secondary btn-lg">Back to Shop</a>
+                    <form method="POST" action="cart.php">
+                        <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
+                        <input type="hidden" name="product_name" value="<?php echo $product['name']; ?>">
+                        <input type="hidden" name="product_price" value="<?php echo $product['price']; ?>">
+
+                        <button type="submit" name="add_to_cart" class="btn btn-outline-success">
+                            Add to Cart
+                            (<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>)
+                        </button>
+
+                        <a href="brain.php?type=<?php echo $product['category']; ?>" class="btn btn-outline-secondary">
+                            Back
+                        </a>
+                    </form>
                 </div>
             </div>
         </div>

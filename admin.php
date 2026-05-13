@@ -2,14 +2,12 @@
 session_start();
 
 // 1. DATABASE CONNECTION
-$servername = getenv('DB_HOST');
-$username   = getenv('DB_USER');
-$password   = getenv('DB_PASS');
-$dbname     = getenv('DB_NAME');
-$port       = 18078; // Add this specific port from your Aiven screen
+$servername = "localhost";
+$username = "root";
+$password = "Prodipta_007#"; // Default XAMPP password is empty
+$dbname = "fasion";
 
-// Update this line to include $port at the end
-$conn = new mysqli($servername, $username, $password, $dbname, $port);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
