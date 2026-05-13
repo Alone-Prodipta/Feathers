@@ -1,13 +1,10 @@
 <?php
-session_start();
+$host = "sql206.infinityfree.com"; // From your screenshot image_47f05b.png
+$user = "if0_41907840";
+$pass = "1PwMWAiitxQv8y"; // Your FTP/Account password
+$db   = "if0_41907840_fasion";
 
-// 1. DATABASE CONNECTION
-$servername = "localhost";
-$username = "root";
-$password = "Prodipta_007#"; // Default XAMPP password is empty
-$dbname = "fasion";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
