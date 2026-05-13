@@ -1,9 +1,9 @@
 <?php
 // 1. DATABASE CONNECTION
-$servername = "localhost";
-$username = "root";
-$password = "Prodipta_007#"; // Use your specific password
-$dbname = "fasion";
+$servername = getenv('DB_HOST') ?: "localhost";
+$username   = getenv('DB_USER') ?: "root";
+$password   = getenv('DB_PASS') ?: "Prodipta_007#";
+$dbname     = getenv('DB_NAME') ?: "fasion";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
