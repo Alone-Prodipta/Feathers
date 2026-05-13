@@ -1,11 +1,13 @@
 <?php
 // 1. DATABASE CONNECTION
-$servername = getenv('DB_HOST') ?: "localhost";
-$username   = getenv('DB_USER') ?: "root";
-$password   = getenv('DB_PASS') ?: "Prodipta_007#";
-$dbname     = getenv('DB_NAME') ?: "fasion";
+$servername = getenv('DB_HOST');
+$username   = getenv('DB_USER');
+$password   = getenv('DB_PASS');
+$dbname     = getenv('DB_NAME');
+$port       = 18078; // Add this specific port from your Aiven screen
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Update this line to include $port at the end
+$conn = new mysqli($servername, $username, $password, $dbname, $port);
 
 // Check connection
 if ($conn->connect_error) {
