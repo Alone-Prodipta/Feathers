@@ -58,11 +58,11 @@ $result = $conn->query($sql);
                     <div style="margin-top: 10px;">
                         <b><?php echo $row['name']; ?></b><br>
                         <span style="color: #058f3e; font-weight: bold;">$<?php echo $row['price']; ?></span><br>
-                        <a href="details.php?id=<?php echo $row['id']; ?>" style="text-decoration: none;">
-                            <button style="margin-top: 10px; font-family: Lemon; color: white; background-color: green; padding: 8px 15px; border-radius: 10px; border: none; cursor: pointer;">
-                                View Details
-                            </button>
-                        </a>
+                        <button type="button"
+                            onclick="location.href='details.php?id=<?php echo $row['id']; ?>'"
+                            style="margin-top: 10px; font-family: 'Lemon', cursive; color: white; background-color: green; padding: 8px 15px; border-radius: 10px; border: none; cursor: pointer;">
+                            View Details
+                        </button>
                     </div>
                 </div>
             <?php endwhile; ?>
