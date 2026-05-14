@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action'])) {
         
         $sql = "INSERT INTO users (username, email, password) VALUES ('$u', '$e', '$p')";
         if ($conn->query($sql)) {
-            echo "<script>alert('Account created! Now please Log in.');</script>";
+           echo "<script>alert('Welcome $u!'); window.location.href='home.html';</script>";
         } else {
             echo "<script>alert('Error: Username might already exist');</script>";
         }
