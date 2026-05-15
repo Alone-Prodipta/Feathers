@@ -49,8 +49,8 @@ if (!$product) {
             color: green;
             font-weight: bold;
         }
-        .sizebtn
-        {
+
+        .sizebtn {
             display: inline;
             float: left;
             margin: 10px;
@@ -59,6 +59,7 @@ if (!$product) {
             padding: 10px;
             width: 20px;
         }
+
         .navbar {
             background-color: bisque;
         }
@@ -120,12 +121,16 @@ if (!$product) {
                         <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
                         <input type="hidden" name="product_name" value="<?php echo $product['name']; ?>">
                         <input type="hidden" name="product_price" value="<?php echo $product['price']; ?>">
-                        <!--span class="badge rounded-pill text-bg-dark">Light</span>
-                        <button class="sizebtn" style="background-color: green; color: white;">S</button>
-                        <button class="sizebtn" style="background-color: green; color: white;">M</button>
-                        <button class="sizebtn" style="background-color: green; color: white;">L</button>                        
-                        <button class="sizebtn" style="background-color: green; color: white;">XL</button>
-                        <button class="sizebtn" style="background-color: green; color: white;">2XL</button-->                        
+                        <!--span class="badge rounded-pill text-bg-dark">Light</span-->
+
+
+                        <div class="size-container">
+                            <button class="sizebtn" style="background-color: green; color: white;">S</button>
+                            <button class="sizebtn" style="background-color: green; color: white;">M</button>
+                            <button class="sizebtn" style="background-color: green; color: white;">L</button>
+                            <button class="sizebtn" style="background-color: green; color: white;">XL</button>
+                            <button class="sizebtn" style="background-color: green; color: white;">2XL</button>
+                        </div>
                         <button type="submit" name="add_to_cart" class="btn btn-outline-success">
                             Add to Cart
                             (<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>)
