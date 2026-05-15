@@ -57,6 +57,7 @@ if (!$product) {
             border-style: none;
             border-radius: 10px;
             padding: 10px;
+            width: 20px;
         }
         .navbar {
             background-color: bisque;
