@@ -54,6 +54,9 @@ if (!$product) {
             display: flex;
             float: left;
             margin: 50px;
+            border-style: none;
+            border-radius: 10px;
+            
         }
         .navbar {
             background-color: bisque;
