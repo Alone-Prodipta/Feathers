@@ -53,7 +53,7 @@ if (!$product) {
         {
             display: inline;
             float: left;
-            margin: 50px;
+            margin: 10px;
             border-style: none;
             border-radius: 10px;
             padding: 10px;
