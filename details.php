@@ -60,12 +60,29 @@ if (!$product) {
             width: 50px;
         }
 
-        .size-container .color-container {
+        .product-options-wrapper {
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 15px;
+            flex-direction: column;
+            /* Stack children vertically */
+            gap: 15px;
+            /* Space between each section */
+            align-items: center;
+            /* Center everything horizontally */
         }
+
+        .color-container,
+        .size-container,
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .action-buttons {
+            margin-top: 10px;
+            /* Space above the buttons */
+        }
+
 
         .navbar {
             background-color: bisque;
@@ -129,21 +146,41 @@ if (!$product) {
                         <input type="hidden" name="product_name" value="<?php echo $product['name']; ?>">
                         <input type="hidden" name="product_price" value="<?php echo $product['price']; ?>">
 
-                        <div class="color-container">
-                            <button class="sizebtn" style="background-color: green;"></button>
-                            <button class="sizebtn" style="background-color: green;"></button>
-                            <button class="sizebtn" style="background-color: green;"></button>
-                            <button class="sizebtn" style="background-color: green;"></button>
-                            <button class="sizebtn" style="background-color: green;"></button>
+                        <!--div class="color-container">
+                            
                         </div>
 
                         <div class="size-container">
-                            <button class="sizebtn" style="background-color: green; color: white;">S</button>
-                            <button class="sizebtn" style="background-color: green; color: white;">M</button>
-                            <button class="sizebtn" style="background-color: green; color: white;">L</button>
-                            <button class="sizebtn" style="background-color: green; color: white;">XL</button>
-                            <button class="sizebtn" style="background-color: green; color: white;">2XL</button>
+                           
+                        </div-->
+                        <div class="product-options-wrapper">
+                            <div class="color-container">
+                                <button class="sizebtn" style="background-color: green;"></button>
+                                <button class="sizebtn" style="background-color: green;"></button>
+                                <button class="sizebtn" style="background-color: green;"></button>
+                                <button class="sizebtn" style="background-color: green;"></button>
+                                <button class="sizebtn" style="background-color: green;"></button>
+                            </div>
+
+                            <div class="size-container">
+                                <button class="sizebtn" style="background-color: green; color: white;">S</button>
+                                <button class="sizebtn" style="background-color: green; color: white;">M</button>
+                                <button class="sizebtn" style="background-color: green; color: white;">L</button>
+                                <button class="sizebtn" style="background-color: green; color: white;">XL</button>
+                                <button class="sizebtn" style="background-color: green; color: white;">2XL</button>
+                            </div>
+
+                            <div class="action-buttons">
+                                <button type="submit" name="add_to_cart" class="btn btn-outline-success">
+                                    Add to Cart (<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>)
+                                </button>
+
+                                <a href="brain.php?type=<?php echo $product['category']; ?>" class="btn btn-outline-secondary">
+                                    Back
+                                </a>
+                            </div>
                         </div>
+
                         <button type="submit" name="add_to_cart" class="btn btn-outline-success">
                             Add to Cart
                             (<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>)
