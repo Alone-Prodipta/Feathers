@@ -51,12 +51,12 @@ if (!$product) {
         }
         .sizebtn
         {
-            display: flex;
+            display: inline;
             float: left;
             margin: 50px;
             border-style: none;
             border-radius: 10px;
-            padding: 5px;
+            padding: 10px;
         }
         .navbar {
             background-color: bisque;
