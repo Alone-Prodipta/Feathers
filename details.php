@@ -51,13 +51,20 @@ if (!$product) {
         }
 
         .sizebtn {
-            display: inline;
+
             float: left;
             margin: 10px;
             border-style: none;
             border-radius: 10px;
             padding: 10px;
-            width: 20px;
+            width: 50px;
+        }
+
+        .size-container {
+            width: 50%;
+            height: 20%;
+            position: relative;
+            float: left;
         }
 
         .navbar {
