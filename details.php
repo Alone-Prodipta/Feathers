@@ -60,11 +60,11 @@ if (!$product) {
             width: 50px;
         }
 
-        .size-container .color-container{
-            width: 50%;
-            height: 20%;
-            position: relative;
-            float: left;
+        .size-container .color-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
         }
 
         .navbar {
@@ -128,7 +128,7 @@ if (!$product) {
                         <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
                         <input type="hidden" name="product_name" value="<?php echo $product['name']; ?>">
                         <input type="hidden" name="product_price" value="<?php echo $product['price']; ?>">
-                        
+
                         <div class="color-container">
                             <button class="sizebtn" style="background-color: green;"></button>
                             <button class="sizebtn" style="background-color: green;"></button>
@@ -136,7 +136,7 @@ if (!$product) {
                             <button class="sizebtn" style="background-color: green;"></button>
                             <button class="sizebtn" style="background-color: green;"></button>
                         </div>
-                        <br>
+
                         <div class="size-container">
                             <button class="sizebtn" style="background-color: green; color: white;">S</button>
                             <button class="sizebtn" style="background-color: green; color: white;">M</button>
