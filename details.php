@@ -63,11 +63,10 @@ if (!$product) {
         .product-options-wrapper {
             display: flex;
             flex-direction: column;
-            /* Stack children vertically */
+       
             gap: 15px;
-            /* Space between each section */
+            
             align-items: center;
-            /* Center everything horizontally */
         }
 
         .color-container,
@@ -80,7 +79,7 @@ if (!$product) {
 
         .action-buttons {
             margin-top: 10px;
-            /* Space above the buttons */
+          
         }
 
 
@@ -146,20 +145,14 @@ if (!$product) {
                         <input type="hidden" name="product_name" value="<?php echo $product['name']; ?>">
                         <input type="hidden" name="product_price" value="<?php echo $product['price']; ?>">
 
-                        <!--div class="color-container">
-                            
-                        </div>
-
-                        <div class="size-container">
-                           
-                        </div-->
+                        
                         <div class="product-options-wrapper">
                             <div class="color-container">
-                                <button class="sizebtn" style="background-color: green;"></button>
-                                <button class="sizebtn" style="background-color: green;"></button>
-                                <button class="sizebtn" style="background-color: green;"></button>
-                                <button class="sizebtn" style="background-color: green;"></button>
-                                <button class="sizebtn" style="background-color: green;"></button>
+                                <button class="sizebtn" style="background-color: grey;"></button>
+                                <button class="sizebtn" style="background-color: red;"></button>
+                                <button class="sizebtn" style="background-color: blue;"></button>
+                                <button class="sizebtn" style="background-color: yellow;"></button>
+                                <button class="sizebtn" style="background-color: black;"></button>
                             </div>
 
                             <div class="size-container">
@@ -180,15 +173,6 @@ if (!$product) {
                                 </a>
                             </div>
                         </div>
-
-                        <button type="submit" name="add_to_cart" class="btn btn-outline-success">
-                            Add to Cart
-                            (<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>)
-                        </button>
-
-                        <a href="brain.php?type=<?php echo $product['category']; ?>" class="btn btn-outline-secondary">
-                            Back
-                        </a>
                     </form>
                 </div>
             </div>
