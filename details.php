@@ -60,7 +60,7 @@ if (!$product) {
             width: 50px;
         }
 
-        .size-container {
+        .size-container .color-container{
             width: 50%;
             height: 20%;
             position: relative;
@@ -128,8 +128,14 @@ if (!$product) {
                         <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
                         <input type="hidden" name="product_name" value="<?php echo $product['name']; ?>">
                         <input type="hidden" name="product_price" value="<?php echo $product['price']; ?>">
-                        <!--span class="badge rounded-pill text-bg-dark">Light</span-->
-
+                        
+                        <div class="color-container">
+                            <button class="sizebtn" style="background-color: green;"></button>
+                            <button class="sizebtn" style="background-color: green;"></button>
+                            <button class="sizebtn" style="background-color: green;"></button>
+                            <button class="sizebtn" style="background-color: green;"></button>
+                            <button class="sizebtn" style="background-color: green;"></button>
+                        </div>
 
                         <div class="size-container">
                             <button class="sizebtn" style="background-color: green; color: white;">S</button>
