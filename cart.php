@@ -10,8 +10,8 @@ if (isset($_POST['add_to_cart'])) {
         'id'       => $_POST['product_id'],
         'name'     => $_POST['product_name'],
         'price'    => $_POST['product_price'],
-        'color'    => $_POST['color'], // Changed from $color = ...
-        'size'     => $_POST['size'],  // Changed from $size = ...
+        'color'    => $_POST['color'], 
+        'size'     => $_POST['size'],  
         'quantity' => $qty
     ];
 
