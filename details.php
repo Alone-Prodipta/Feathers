@@ -144,8 +144,8 @@ if (!$product) {
                         <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
                         <input type="hidden" name="product_name" value="<?php echo $product['name']; ?>">
                         <input type="hidden" name="product_price" value="<?php echo $product['price']; ?>">
-
-                        
+                        <input type="hidden" name="product_size" value="<?php echo $product['size']; ?>">
+                        <input type="hidden" name="product_color" value="<?php echo $product['color']; ?>">
                         <div class="product-options-wrapper">
                             <div class="color-container">
                                 <button class="sizebtn" style="background-color: grey;"></button>
