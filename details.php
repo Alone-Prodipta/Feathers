@@ -108,7 +108,7 @@ if (!$product) {
                         </div>
 
                         <button type="submit" name="add_to_cart" class="btn btn-outline-success">
-                            Add to Cart (<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>)
+                            Add to Cart 
                         </button>
                         <a href="brain.php?type=<?php echo $product['category']; ?>" class="btn btn-outline-secondary">Back</a>
                     </form>
