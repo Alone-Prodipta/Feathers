@@ -61,7 +61,7 @@ if (!$product) {
                 <form class="d-flex w-50" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search">
                     <button class="btn btn-outline-success" type="button" onclick="location.href='cart.php';">
-                        Cart (<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>)
+                        Cart <?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>
                     </button>
                 </form>
             </div>
