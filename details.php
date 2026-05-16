@@ -1,10 +1,12 @@
 <?php
-$host = "sql206.infinityfree.com"; // From your screenshot image_47f05b.png
-$user = "if0_41907840";
-$pass = "1PwMWAiitxQv8y"; // Your FTP/Account password
-$db   = "if0_41907840_fasion";
+session_start();
+// 1. DATABASE CONNECTION
+$servername = "localhost";
+$username = "root";
+$password = "Prodipta_007#"; 
+$dbname = "fasion";
 
-$conn = mysqli_connect($host, $user, $pass, $db);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -32,60 +34,10 @@ if (!$product) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Kenia" rel="stylesheet">
     <style>
-        body {
-            background-color: bisque;
-            padding-top: 100px;
-        }
-
-        .product-container {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            border: 2px solid green;
-        }
-
-        .price {
-            font-size: 24px;
-            color: green;
-            font-weight: bold;
-        }
-
-        .sizebtn {
-
-            float: left;
-            margin: 10px;
-            border-style: none;
-            border-radius: 10px;
-            padding: 10px;
-            width: 50px;
-        }
-
-        .product-options-wrapper {
-            display: flex;
-            flex-direction: column;
-       
-            gap: 15px;
-            
-            align-items: center;
-        }
-
-        .color-container,
-        .size-container,
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .action-buttons {
-            margin-top: 10px;
-          
-        }
-
-
-        .navbar {
-            background-color: bisque;
-        }
+        body { background-color: bisque; padding-top: 100px; }
+        .product-container { background: white; padding: 30px; border-radius: 15px; border: 2px solid green; }
+        .price { font-size: 24px; color: green; font-weight: bold; }
+        .navbar { background-color: bisque; }
     </style>
 </head>
 
@@ -93,40 +45,32 @@ if (!$product) {
     <nav class="navbar navbar-expand-lg bg-bisque fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#" style="font-family:lobster;color:rgb(4, 72, 4);"><u>Feathers</u>.</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home.html" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;">Home</a>
-                    </li>
-
+                    <li class="nav-item"><a class="nav-link active" href="home.html" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;">Home</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;">
-                            Shop
-                        </a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;">Shop</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="brain.php?type=formal">Formal wear</a></li>
                             <li><a class="dropdown-item" href="brain.php?type=casual">Casual wear</a></li>
                             <li><a class="dropdown-item" href="brain.php?type=traditional">Traditional wear</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;">Contact Us</a>
-                    </li>
-
+                    <li class="nav-item"><a class="nav-link" href="contact.html" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;">Contact Us</a></li>
                 </ul>
                 <form class="d-flex w-50" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Cart</button>
+                    <input class="form-control me-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-success" type="button" onclick="location.href='cart.php';">
+                        Cart (<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>)
+                    </button>
                 </form>
             </div>
         </div>
     </nav>
+
     <div class="container">
         <div class="row product-container shadow">
             <div class="col-md-6">
@@ -144,42 +88,36 @@ if (!$product) {
                         <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
                         <input type="hidden" name="product_name" value="<?php echo $product['name']; ?>">
                         <input type="hidden" name="product_price" value="<?php echo $product['price']; ?>">
-                        <input type="hidden" name="product_size" value="<?php echo $product['size']; ?>">
-                        <input type="hidden" name="product_color" value="<?php echo $product['color']; ?>">
-                        <div class="product-options-wrapper">
-                            <div class="color-container">
-                                <button class="sizebtn" style="background-color: grey;"></button>
-                                <button class="sizebtn" style="background-color: red;"></button>
-                                <button class="sizebtn" style="background-color: blue;"></button>
-                                <button class="sizebtn" style="background-color: yellow;"></button>
-                                <button class="sizebtn" style="background-color: black;"></button>
-                            </div>
 
-                            <div class="size-container">
-                                <button class="sizebtn" style="background-color: green; color: white;">S</button>
-                                <button class="sizebtn" style="background-color: green; color: white;">M</button>
-                                <button class="sizebtn" style="background-color: green; color: white;">L</button>
-                                <button class="sizebtn" style="background-color: green; color: white;">XL</button>
-                                <button class="sizebtn" style="background-color: green; color: white;">2XL</button>
-                            </div>
-
-                            <div class="action-buttons">
-                                <button type="submit" name="add_to_cart" class="btn btn-outline-success">
-                                    Add to Cart (<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>)
-                                </button>
-
-                                <a href="brain.php?type=<?php echo $product['category']; ?>" class="btn btn-outline-secondary">
-                                    Back
-                                </a>
-                            </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Select Size:</label>
+                            <select name="product_size" class="form-select" style="width: 150px;" required>
+                                <option value="S">S</option>
+                                <option value="M" selected>M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Select Colour:</label>
+                            <select name="product_colour" class="form-select" style="width: 150px;" required>
+                                <option value="Black">Black</option>
+                                <option value="White">White</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Grey">Grey</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" name="add_to_cart" class="btn btn-outline-success">
+                            Add to Cart (<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>)
+                        </button>
+                        <a href="brain.php?type=<?php echo $product['category']; ?>" class="btn btn-outline-secondary">Back</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
