@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/28171684/README.md)
 # Feathers
 
 > A Dockerized fashion website prototype built to learn and practice PHP.
@@ -90,7 +89,7 @@ git clone https://github.com/Alone-Prodipta/Feathers.git
 2. `docker run -p 3000:3000 my-app`
 
 ## 🚢 Deployment
-
+![Logo]
 ### Docker
 ```bash
 docker build -t feathers .
