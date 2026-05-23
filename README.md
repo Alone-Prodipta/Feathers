@@ -39,6 +39,7 @@ The application leverages standard PHP architecture, coordinating backend operat
 - HTML
 - CSS
 - JAVASCRIPT
+- BOOTSTRAP
 ### Backend.. 
 - PHP
 - JAVASCRIPT
