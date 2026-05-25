@@ -69,6 +69,7 @@ if (isset($_GET['action']) && isset($_GET['id'])) {
     <title>Boutique Cart | Your Style</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Kenia" rel="stylesheet">
     <style>
         body { background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
         .cart-container { background: white; border-radius: 20px; padding: 40px; margin-top: 50px; }
