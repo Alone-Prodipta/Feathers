@@ -39,6 +39,7 @@ The application leverages standard PHP architecture, coordinating backend operat
 - HTML
 - CSS
 - JAVASCRIPT
+- BOOTSTRAP
 ### Backend.. 
 - PHP
 - JAVASCRIPT
@@ -89,6 +90,7 @@ git clone https://github.com/Alone-Prodipta/Feathers.git
 2. `docker run -p 3000:3000 my-app`
 
 ## 🚢 Deployment
+### Hosted on infinity free.com
 ![Website Architecture](workflows.excalidraw.png)
 ### Docker
 ```bash
