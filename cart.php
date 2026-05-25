@@ -76,8 +76,49 @@ if (isset($_GET['action']) && isset($_GET['id'])) {
         .checkout-box { background: #fff; border-left: 1px solid #eee; padding-left: 20px; }
     </style>
 </head>
-<body>
-    <div class="container cart-container shadow-sm">
+<body style="background-color: bisque;">
+    <nav class="navbar navbar-expand-lg bg-bisque fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-family:lobster;color:rgb(4, 72, 4);"><u>Feathers</u>.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="brain.php?type=formal">Formal wear</a></li>
+                            <li><a class="dropdown-item" href="brain.php?type=casual">Casual wear</a></li>
+                            <li><a class="dropdown-item" href="brain.php?type=traditional">Traditional wear</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex w-50" action="brain.php" method="GET" role="search">
+                    <input name="search" class="form-control me-2" type="search" placeholder="Search for products..."
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="button" onclick="location.href='cart.php';">
+                        Cart
+                        
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container cart-container shadow-sm" style="background-color: transparent;color: green;">
         <div class="row">
             <div class="col-md-8">
                 <h2 class="mb-4">Shopping Bag <span class="text-muted fs-5">(<?php echo count($_SESSION['cart'] ?? []); ?> items)</span></h2>
@@ -131,12 +172,12 @@ if (isset($_GET['action']) && isset($_GET['id'])) {
                     <div class="text-center py-5">
                         <i class="fa fa-shopping-bag fa-4x text-light mb-3"></i>
                         <p class="fs-4 text-muted">Your bag is empty</p>
-                        <a href="brain.php" class="btn btn-dark px-4">Browse Collection</a>
+                        <a href="brain.php" class="btn btn-success px-4">Browse Collection</a>
                     </div>
                 <?php endif; ?>
             </div>
 
-            <div class="col-md-4 checkout-box">
+            <div class="col-md-4 checkout-box" style="background-color: transparent;color: green;">
                 <h4 class="mb-4">Summary</h4>
                 <div class="d-flex justify-content-between mb-2">
                     <span>Subtotal</span>
@@ -151,7 +192,7 @@ if (isset($_GET['action']) && isset($_GET['id'])) {
                     <span>Total</span>
                     <span>$<?php echo number_format($grand_total ?? 0, 2); ?></span>
                 </div>
-                <button class="btn btn-dark w-100 py-3 mb-3 rounded-pill" <?php echo empty($_SESSION['cart']) ? 'disabled' : ''; ?>>
+                <button class="btn btn-success w-100 py-3 mb-3 rounded-pill" <?php echo empty($_SESSION['cart']) ? 'disabled' : ''; ?>>
                     Proceed to Checkout
                 </button>
                 <a href="brain.php" class="btn btn-outline-secondary w-100 py-3 rounded-pill">Continue Shopping</a>
