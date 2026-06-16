@@ -3,7 +3,8 @@ body {
 }
 
 #switch {
-    margin-left: 76%;
+    margin-left: 40%;
+    
 }
 
 button {
@@ -33,171 +34,10 @@ button:hover {
     cursor: pointer;
 }
 
-.head-text p {
-    font-family: lobster;
-    font-size: 100px;
-}
-
-.header {
-    width: 100%;
-}
-
-.header>img {
-    width: 100%;
-    height: 100%;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-}
-
-.head-text {
-    position: relative;
-    z-index: 0;
-    margin-top: -535px;
-    color: white;
-    padding-left: 50px;
-}
-
-.head-text p {
-    line-height: 10px;
-}
-
-div.ribbon {
-    width: 100%;
-    overflow: revert-layer;
-    margin-top: 187px;
-    display: flex;
-    border-top: 2px dotted green;
-}
-
-div.ribbon div {
-    width: 28%;
-    margin-top: 20px;
-    margin-left: 60px;
-    height: 437px;
-    transition: 2s;
-    transition-delay: 0.1s;
-}
-
-div.ribbon div img {
-    width: 100%;
-    height: 100%;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-div.ribbon div:hover {
-    transform: scale(1.09);
-}
-
-div.ribbon div:hover button {
-    opacity: 1;
-}
-
-.op {
-    width: 28%;
-    margin-left: 282px;
-    top: 94%;
-    opacity: 0;
-}
-
-li {
-    list-style-type: Square;
-    font-family: Tagesschrift;
-    font-size: 30px;
-    text-align: center;
-}
-
-div.ribbon div:hover li {
-    opacity: 0;
-}
-
-.description {
-    height: 40%;
-    width: 82%;
-    margin-top: 10%;
-    padding-left: 260px;
-    font-family: Londrina Shadow;
-    color: green;
-    border-top: 3px dotted green;
-    padding-top: 20px;
-}
-
-#info {
-    height: 40%;
-    width: 30%;
-    padding: 20px;
-    border: 2px solid rgb(4, 71, 4);
-    padding-bottom: 20px;
-}
-
-.description div {
-    float: left;
-    margin-right: 185px;
-}
-
-#info>button {
-    border-radius: 0;
-    border-color: rgb(26, 81, 4);
-    border-width: 2px;
-    color: rgb(26, 81, 4);
-    transition: none;
-    width: 40%;
-    background-color: transparent;
-}
-
-#info>button:hover {
-    translate: scale(0);
-    background-color: rgb(26, 81, 4);
-    color: bisque;
-}
-
-@media screen and (max-width:1357px) {
-    .description div {
-        float: left;
-        margin-right: 79px;
-        margin-left: -4%;
-    }
-
-    .header>button {
-        margin-left: -2%;
-
-    }
-
-    #switch {
-        margin-left: 67%;
-    }
-
-    #info {
-        width: 30%;
-        height: 600px;
-        margin-left: -9%;
-    }
-
-    #info button {
-        width: 64%;
-        margin-left: 20%;
-        margin-top: 5px;
-    }
-
-    .ribbon div>button {
-        width: 64%;
-        margin-left: 20%;
-    }
-
-    .description {
-        margin-top: 30%;
-    }
-
-    .head-text p {
-        line-height: 0;
-        margin-top: 18%;
-        font-size: 80px;
-    }
-
-    .head-text button {
-        width: 20%;
-        margin-top: -21px;
-    }
+#nav p
+{
+    font-size: xx-large;
+    
 }
 
 @media screen and(max-height:1800px) {

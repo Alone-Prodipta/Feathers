@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Birthstone&
 family=Delius&family=Kaushan+Script&family=David libre&family=Londrina+Shadow&family=Kenia&family=Konkhmer+Sleokchher&
@@ -24,9 +25,8 @@ family=Roboto+Slab&family=Tagesschrift&display=swap" rel="stylesheet">
 
 <body>
     <div class="header">
-        <h1 style="margin-bottom:-58px;font-family:lobster;color:#054805"><u>Feathers</u>.</h1>
-        <button id="switch" onclick="document.getElementById('id02').style.display='block'">Sign in</button>
-        <button onclick="document.getElementById('id01').style.display='block'">Log in</button>
+        <!--p </p>
+       
         <div id="overlay"></div>
 
         <div id="id01" class="modal">
@@ -81,9 +81,17 @@ family=Roboto+Slab&family=Tagesschrift&display=swap" rel="stylesheet">
                     <button type="submit" id="signin">Sign in</button>
                 </div>
             </form>
+        </div-->
+        <div class="navbar bg-base-transparent shadow-sm">
+            <div class="navbar-start">
+                <p class="btn btn-ghost text-xl" style="font-family:lobster;color:#054805;font-size: xx-large" ><u>Feathers</u>.
+            </div>
+            <button id="switch" onclick="document.getElementById('id02').style.display='block'">Sign in</button>
+            <button onclick="document.getElementById('id01').style.display='block'">Log in</button>
         </div>
-        <div class="hero min-h-screen"
-            style="background-image: url(header.avif);">
+
+
+        <div class="hero min-h-screen" style="background-image: url(header.avif);">
             <div class="hero-overlay"></div>
             <div class="hero-content text-neutral-content text-center">
                 <div class="max-w-md">
@@ -92,12 +100,12 @@ family=Roboto+Slab&family=Tagesschrift&display=swap" rel="stylesheet">
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                         quasi. In deleniti eaque aut repudiandae et a id nisi.
                     </p>
-                    
+
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </body>
