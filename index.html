@@ -25,10 +25,15 @@ family=Roboto+Slab&family=Tagesschrift&display=swap" rel="stylesheet">
 
 <body>
     <div class="header">
-        <!--p </p>
-       
+        
+        <div class="navbar bg-base-transparent shadow-sm">
+            <div class="navbar-start">
+                <p class="btn btn-ghost text-xl" style="font-family:lobster;color:#054805;font-size: xx-large" ><u>Feathers</u>.
+            </div>
+            <button id="switch" onclick="document.getElementById('id02').style.display='block'">Sign in</button>
+            <button onclick="document.getElementById('id01').style.display='block'">Log in</button>
+        </div>
         <div id="overlay"></div>
-
         <div id="id01" class="modal">
             <form class="modal-content animate" action="admin.php" method="post">
                 <div class="imgcontainer">
@@ -81,24 +86,16 @@ family=Roboto+Slab&family=Tagesschrift&display=swap" rel="stylesheet">
                     <button type="submit" id="signin">Sign in</button>
                 </div>
             </form>
-        </div-->
-        <div class="navbar bg-base-transparent shadow-sm">
-            <div class="navbar-start">
-                <p class="btn btn-ghost text-xl" style="font-family:lobster;color:#054805;font-size: xx-large" ><u>Feathers</u>.
-            </div>
-            <button id="switch" onclick="document.getElementById('id02').style.display='block'">Sign in</button>
-            <button onclick="document.getElementById('id01').style.display='block'">Log in</button>
         </div>
 
-
-        <div class="hero min-h-screen" style="background-image: url(header.avif);">
-            <div class="hero-overlay"></div>
-            <div class="hero-content text-neutral-content text-center">
-                <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-                    <p class="mb-5">
-                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+        <div class="hero min-h-screen rounded-10" style="background-image: url(header.avif);">
+            
+            <div class="hero-content text-neutral-content text-left">
+                <div class="w-full">
+                    <h1 class="mb-5 text-9xl font-bold text-left" style="font-family: lobster;">Find the best <i>
+                        <u>version</u></i></h1>
+                    <p class="mb-5 text-7xl text-left" style="font-family: birthstone;">
+                        of your style..
                     </p>
 
                 </div>
