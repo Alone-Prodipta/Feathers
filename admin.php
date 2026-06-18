@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action'])) {
     $action = $_POST['action'];
 
     // --- SIGN UP LOGIC ---
-    if ($action == "signup") {
+    if ($action == "signin") {
         $u = $_POST['reg_user'];
         $e = $_POST['reg_email'];
         $p = $_POST['reg_psw'];
