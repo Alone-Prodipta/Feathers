@@ -30,15 +30,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action'])) {
 
     // --- LOGIN LOGIC ---
     if ($action == "login") {
-        $u = $_POST['login_user'];
-        $p = $_POST['login_psw'];
-        
-        $sql = "SELECT * FROM users WHERE username='$u' AND password='$p'";
+        $login_input = trim($_POST['login_user'] ?? '');
+        $p = $_POST['login_psw'] ?? '';
+
+        $login_input = mysqli_real_escape_string($conn, $login_input);
+        $p = mysqli_real_escape_string($conn, $p);
+
+        $sql = "SELECT * FROM users WHERE (username='$login_input' OR email='$login_input') AND password='$p'";
         $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            $_SESSION['user'] = $u;
-             echo "<script>alert('Welcome $u!'); window.location.href='home.html';</script>";
+        if ($result && $result->num_rows > 0) {
+            $user = $result->fetch_assoc();
+            $_SESSION['user'] = $user['username'];
+            echo "<script>alert('Welcome " . addslashes($user['username']) . "!'); window.location.href='home.html';</script>";
         } else {
             echo "<script>alert('Invalid Username or Password');</script>";
         }
