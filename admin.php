@@ -1,5 +1,5 @@
 <?php
-$host = "sql206.infinityfree.com"; // From your screenshot image_47f05b.png
+$host = "sql206.infinityfree.com"; 
 $user = "if0_41907840";
 $pass = "1PwMWAiitxQv8y"; // Your FTP/Account password
 $db   = "if0_41907840_fasion";
