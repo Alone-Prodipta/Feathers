@@ -33,9 +33,9 @@
                     <input type="hidden" name="action" value="login">
                     <fieldset class="fieldset">
                         <label class="label">Email</label>
-                        <input type="email" class="input" placeholder="Email" />
+                        <input type="email" class="input" name="login_user" placeholder="Email" />
                         <label class="label">Password</label>
-                        <input type="password" class="input" placeholder="Password" />
+                        <input type="password" class="input" name="login_psw" placeholder="Password" />
                         <div><a class="link link-hover">Forgot password?</a></div>
                         <button class="btn btn-soft btn-success" id="login">Login</button>
                     </fieldset>
@@ -49,14 +49,14 @@
                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
                 <form action="admin.php" method="POST">
-                    <input type="hidden" name="action" value="Signin">
+                    <input type="hidden" name="action" value="signin">
                     <fieldset class="fieldset">
                         <label class="label">Name</label>
-                        <input type="text" class="input" placeholder="Name" />
+                        <input type="text" class="input" name="reg_name" placeholder="Name" />
                         <label class="label">Email</label>
-                        <input type="email" class="input" placeholder="Email" />
+                        <input type="email" class="input" name="reg_email" placeholder="Email" />
                         <label class="label">Password</label>
-                        <input type="password" class="input" placeholder="Password" />
+                        <input type="password" class="input" name="reg_psw" placeholder="Password" />
                         <div><a class="link link-hover">Forgot password?</a></div>
                         <button class="btn btn-soft btn-success" id="signin">Sign in</button>
                     </fieldset>
