@@ -19,13 +19,14 @@
             <div class="navbar-start">
                 <p class="btn btn-ghost text-xl" style="font-family:lobster;color:#054805;font-size: xx-large">
                     <u>Feathers</u>.
+                </p>
             </div>
-            <button id="switch" class="btn" onclick="my_modal_4.showModal()" action="admin.php" method="post">Sign in</button>
-            <button class="btn" onclick="my_modal_3.showModal()" action="admin.php" method="post">Log in</button>
+            <button id="switch" class="btn" onclick="my_modal_4.showModal()">Sign in</button>
+            <button class="btn" onclick="my_modal_3.showModal()">Log in</button>
         </div>
         <dialog id="my_modal_3" class="modal">
             <div class="modal-box">
-                <form method="dialog">
+                <form method="dialog" action="admin.php" method="post">
                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
                 <fieldset class="fieldset">
@@ -34,14 +35,14 @@
                     <label class="label">Password</label>
                     <input type="password" class="input" placeholder="Password" />
                     <div><a class="link link-hover">Forgot password?</a></div>
-                    <button class="btn btn-soft btn-success " id="login">Login</button>
+                    <button class="btn btn-soft btn-success" id="login">Login</button>
                 </fieldset>
             </div>
         </dialog>
 
         <dialog id="my_modal_4" class="modal">
             <div class="modal-box">
-                <form method="dialog">
+                <form method="dialog" action="admin.php" method="post">
                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
                 <fieldset class="fieldset">
@@ -52,7 +53,7 @@
                     <label class="label">Password</label>
                     <input type="password" class="input" placeholder="Password" />
                     <div><a class="link link-hover">Forgot password?</a></div>
-                    <button class="btn btn-soft btn-success " id="signin">Sign in</button>
+                    <button class="btn btn-soft btn-success" id="signin">Sign in</button>
                 </fieldset>
             </div>
         </dialog>
