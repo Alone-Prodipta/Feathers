@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="india.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Birthstone&display=swap&family=Tagesschrift" 
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Birthstone&display=swap&family=Tagesschrift"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
@@ -26,35 +26,41 @@
         </div>
         <dialog id="my_modal_3" class="modal">
             <div class="modal-box">
-                <form method="dialog" action="admin.php" method="post">
+                <form method="dialog">
                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
-                <fieldset class="fieldset">
-                    <label class="label">Email</label>
-                    <input type="email" class="input" placeholder="Email" />
-                    <label class="label">Password</label>
-                    <input type="password" class="input" placeholder="Password" />
-                    <div><a class="link link-hover">Forgot password?</a></div>
-                    <button class="btn btn-soft btn-success" id="login">Login</button>
-                </fieldset>
+                <form action="admin.php" method="POST">
+                    <input type="hidden" name="action" value="login">
+                    <fieldset class="fieldset">
+                        <label class="label">Email</label>
+                        <input type="email" class="input" placeholder="Email" />
+                        <label class="label">Password</label>
+                        <input type="password" class="input" placeholder="Password" />
+                        <div><a class="link link-hover">Forgot password?</a></div>
+                        <button class="btn btn-soft btn-success" id="login">Login</button>
+                    </fieldset>
+                </form>
             </div>
         </dialog>
 
         <dialog id="my_modal_4" class="modal">
             <div class="modal-box">
-                <form method="dialog" action="admin.php" method="post">
+                <form method="dialog">
                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
-                <fieldset class="fieldset">
-                    <label class="label">Name</label>
-                    <input type="text" class="input" placeholder="Name" />
-                    <label class="label">Email</label>
-                    <input type="email" class="input" placeholder="Email" />
-                    <label class="label">Password</label>
-                    <input type="password" class="input" placeholder="Password" />
-                    <div><a class="link link-hover">Forgot password?</a></div>
-                    <button class="btn btn-soft btn-success" id="signin">Sign in</button>
-                </fieldset>
+                <form action="admin.php" method="POST">
+                    <input type="hidden" name="action" value="Signin">
+                    <fieldset class="fieldset">
+                        <label class="label">Name</label>
+                        <input type="text" class="input" placeholder="Name" />
+                        <label class="label">Email</label>
+                        <input type="email" class="input" placeholder="Email" />
+                        <label class="label">Password</label>
+                        <input type="password" class="input" placeholder="Password" />
+                        <div><a class="link link-hover">Forgot password?</a></div>
+                        <button class="btn btn-soft btn-success" id="signin">Sign in</button>
+                    </fieldset>
+                </form>
             </div>
         </dialog>
 
