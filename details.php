@@ -59,7 +59,7 @@ if (!$product) {
                     <li class="nav-item"><a class="nav-link" href="contact.html" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;">Contact Us</a></li>
                 </ul>
                 <form class="d-flex w-50" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search">
+                    <input class="form-control me-2" type="search" placeholder="Search" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
                     <button class="btn btn-outline-success" type="button" onclick="location.href='cart.php';">
                         Cart 
                         

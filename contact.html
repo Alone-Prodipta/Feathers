@@ -116,7 +116,8 @@
 
                 </ul>
                 <form class="d-flex w-50" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                    value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
                     <button class="btn btn-outline-success " type="submit">Cart</button>
                 </form>
             </div>

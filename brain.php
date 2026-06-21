@@ -69,7 +69,8 @@ if ($search_query !== '') {
                     </li>
                 </ul>
                 <form class="d-flex w-50" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                    value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">>
                     <a href="cart.php" class="btn btn-outline-success">Cart</a>
             </div>
         </div>
