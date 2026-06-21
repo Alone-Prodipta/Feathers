@@ -15,11 +15,36 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'formal';
 // FETCH PRODUCTS
 $sql = "SELECT * FROM product WHERE category = '$type'";
 $result = $conn->query($sql);
+
+$search_query = isset($_GET['search']) ? $_GET['search'] : '';
+
+if ($search_query !== '') {
+    // A. If the user searched for something, find products matching their text
+    // Using prepared statements prevents SQL injection hacking
+    $sql = "SELECT * FROM product WHERE name LIKE ? OR category LIKE ?";
+    $stmt = $conn->prepare($sql);
+    $search_term = "%" . $search_query . "%";
+    $stmt->bind_param("ss", $search_term, $search_term);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $page_title = "Search results for '" . htmlspecialchars($search_query) . "'";
+} else {
+    // B. Default behavior: If no search query, filter by category type
+    if ($type === '') {
+        $type = 'formal'; // Default fallback category
+    }
+    $sql = "SELECT * FROM product WHERE category = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $type);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $page_title = "Showing " . ucfirst($type) . " Wear";
+}
 ?>
 <html>
 
 <head>
-    <title>Showing <?php echo ucfirst($type); ?> Wear</title>
+    <title><?php echo isset($page_title) ? $page_title : "Showing " . ucfirst($type) . " Wear"; ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lemon" rel="stylesheet">
 </head>
