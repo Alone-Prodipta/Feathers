@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action'])) {
         
         $sql = "INSERT INTO users (username, email, password) VALUES ('$u', '$e', '$p')";
         if ($conn->query($sql)) {
-           echo "<script>alert('Welcome $u!'); window.location.href='home.html';</script>";
+           echo "<script>alert('Welcome $u!'); window.location.href='home.php';</script>";
         } else {
             echo "<script>alert('Error: Username might already exist');</script>";
         }
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action'])) {
         if ($result && $result->num_rows > 0) {
             $user = $result->fetch_assoc();
             $_SESSION['user'] = $user['username'];
-            echo "<script>alert('Welcome " . addslashes($user['username']) . "!'); window.location.href='home.html';</script>";
+            echo "<script>alert('Welcome " . addslashes($user['username']) . "!'); window.location.href='home.php';</script>";
         } else {
             echo "<script>alert('Invalid Username or Password');</script>";
         }
