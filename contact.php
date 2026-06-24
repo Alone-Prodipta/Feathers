@@ -143,17 +143,17 @@
                 <label for="inputCity" class="form-label">City</label>
                 <input type="text" class="form-control" id="inputCity">
             </div>
-            <textarea class="message" style="width:1000px; height:100px; margin-left: 10px; padding-top: 10px" placeholder="Write your opinion">
-            </textarea>
+            <div class="col-12">
+                <label for="messageText" class="form-label">Message</label>
+                <textarea id="messageText" class="form-control" style="height:100px;" placeholder="Write your opinion"></textarea>
+            </div>
             <div class="d-flex flex-wrap gap-3">
                 <a class="icon" href="https://www.instagram.com/alone_prodipta/"><i class="fa fa-instagram"></i></a>
                 <a class="icon" href="mailto:nayebprodipta@gmail.com"><i class="bi bi-envelope-fill"></i></a>
                 <a class="icon" href="https://tinyurl.com/Prodipta-chat"><i class="bi bi-whatsapp"></i></a>
             </div>
-            <button class="bg-success text-white py-2 px-4 send"><a href="mailto:nayebprodipta@gmail.com" style="color: white; text-decoration: none;">Send</a></button>
-        </div>
+            <button class="bg-success text-white py-2 px-4 send" type="submit">Send</button>
         </form>
-
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
