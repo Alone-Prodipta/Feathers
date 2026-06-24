@@ -65,7 +65,7 @@ git clone https://github.com/Alone-Prodipta/Feathers.git
 ├── admin.php
 ├── brain.php
 ├── cart.php
-├── contact.html
+├── contact.php
 ├── details.php
 ├── endline.png
 ├── header.avif

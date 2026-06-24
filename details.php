@@ -56,7 +56,7 @@ if (!$product) {
                             <li><a class="dropdown-item" href="brain.php?type=traditional">Traditional wear</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php" style="color: rgb(4, 72, 4); font-weight: bold; text-decoration: underline;">Contact Us</a></li>
                 </ul>
                 <form class="d-flex w-50" action="brain.php" method="GET" role="search">
                     <input name="search" class="form-control me-2" type="search" placeholder="Search"

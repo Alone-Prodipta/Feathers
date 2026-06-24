@@ -65,7 +65,7 @@ if ($search_query !== '') {
                         </ul>
                     </li>
                     <li class="nav-item mx-5">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link" href="contact.php">Contact Us</a>
                     </li>
                 </ul>
                 <form class="d-flex w-50" action="brain.php" method="GET" role="search">
