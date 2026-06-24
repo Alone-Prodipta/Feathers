@@ -69,7 +69,7 @@ git clone https://github.com/Alone-Prodipta/Feathers.git
 ├── details.php
 ├── endline.png
 ├── header.avif
-├── home.html
+├── home.php
 ├── index.html
 ├── india.css
 ├── ph1.jpg
