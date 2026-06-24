@@ -118,7 +118,7 @@
                 <form class="d-flex w-50" action="brain.php" method="GET" role="search">
                     <input name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                     value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
-                    <button class="btn btn-outline-success " type="submit">Cart</button>
+                    <button class="btn btn-outline-success " type="submit" action="cart.php">Cart</button>
                 </form>
             </div>
         </div>
