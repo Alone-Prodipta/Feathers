@@ -33,7 +33,7 @@ if ($search_query !== '') {
     if ($type === '') {
         $type = 'formal'; // Default fallback category
     }
-    $sql = "SELECT * FROM product WHERE name = ?";
+    $sql = "SELECT * FROM product WHERE category = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $type);
     $stmt->execute();
