@@ -82,7 +82,7 @@
         width: 50%;
         margin-left: 25%;
     }
-    #cartButton:hover 
+    #cartButton a:hover 
     {
         color: white;
     }
