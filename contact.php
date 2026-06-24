@@ -82,9 +82,14 @@
         width: 50%;
         margin-left: 25%;
     }
-    #cartButton a:hover 
-    {
+    .cart-btn {
+        color: green;
+        border-color: green;
+    }
+    .cart-btn:hover {
         color: white;
+        background-color: green;
+        border-color: green;
     }
 </style>
 
@@ -122,7 +127,8 @@
                 <form class="d-flex w-50" action="brain.php" method="GET" role="search">
                     <input name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                     value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
-                    <button class="btn btn-outline-success" id="cartButton" type="submit"><a href="cart.php" style="color: green; text-decoration: none;">Cart</a></button>
+                    <button class="btn btn-outline-success" type="submit">
+                    <a class="btn btn-outline-success ms-2 cart-btn" href="cart.php">Cart</a></button>
                 </form>
             </div>
         </div>
